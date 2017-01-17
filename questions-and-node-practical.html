@@ -1,0 +1,95 @@
+<html><head></head><body>
+<style>
+body,html{color:#fff;background:#000;font-family:monospace;padding:0;margin:0;border:0;}
+details{margin:.25em;white-space:pre-wrap;}
+summary{
+position:relative;
+background: #222;padding:.25em;cursor:pointer;
+transition:background-color .25s linear;
+}
+summary:hover{background:#555;}
+
+*{outline:none!important;}
+
+details>div{
+  opacity:0;
+}
+details[open]>div {
+  animation-name: fadeInDown;
+  animation-duration: 0.5s;
+  opacity:1;
+  margin-top: -2em;
+}
+
+@keyframes fadeInDown {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+</style>
+<details contenteditable="true"><summary contenteditable="false">Questions</summary>
+<div>
+- hardest bug?
+- least / favorite part of js?
+  - what would you add / take away?
+  - typeof [] == ?
+  - x.prototype vs x.__proto__ ?
+  - convert string of object to object using ______ ?
+- side projects?
+- editor? browser?
+- what is a must-have in your dev environment?
+- sql, use case for a: (try not referencing venn diagrams)
+  - join vs union
+  - inner join vs left join
+  - max vs greatest
+  - coalesce
+  - a HAVING clause
+- tests?
+  - work locally, fail remotely. What do you do?
+  - encountered nondeterministic tests?
+</div>
+</details>
+<details contenteditable="true"><summary contenteditable="false">What would this match?</summary>
+<div>
+:root[html] div b:not(.b):not([c]>[c]) span+span:target[style*=bold] ~ #hover:hover
+</div>
+</details>
+<details contenteditable="true"><summary contenteditable="false">What would this match?</summary>
+<div>
+/^\d{4}([^0-9a-z])\d{2}\1\d{2}$/i
+</div>
+</details>
+<details contenteditable="true"><summary contenteditable="false">plain JS</summary>
+<div>
+<pre>"Line by line, what's happening here?"
+    .split('')
+    .filter(x=&gt;x&gt;=`x`)
+    .map(x=&gt;x.charCodeAt(0).toString(2))
+    .reduce((o,b)=&gt;(o[b] ? o[b]++ : o[b]=1, o), {})
+</pre>
+</div>
+</details>
+<details contenteditable="true"><summary contenteditable="false">node practical</summary>
+<div>
+Using
+* any documentation / public modules
+* no code generators
+construct a node server which upon a request at localhost fetches and returns a human-readable form of the JSON at:
+
+<b>http://jsonplaceholder.typicode.com/posts</b>
+
+placing &lt;hr/&gt;s between array items.
+
+≈25 minutes.
+</div>
+</details>
+</body>
+<script>
+//shouldn't be editable, but is, make it less so
+document.querySelectorAll("[contenteditable='false']").forEach(d => {
+  d.addEventListener("click", function () {
+    this.blur()
+  })
+})
+</script>
+</html>
