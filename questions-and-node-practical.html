@@ -69,6 +69,24 @@ details[open]>div {
 </pre>
 </div>
 </details>
+<details contenteditable="true"><summary contenteditable="false">js practical</summary>
+<div>
+Using no other sources, write a debounce function.  It should take a function and a wait duration, and return the debounced function.
+<!--<b>Debounce</b> - a function that runs after x milliseconds have elapsed since it was last ran.-->
+Example: one might <b>debounce</b> the action attached to a button a user might hastily repeatedly press but expect to only be invoked once.
+
+It should pass this test:
+<pre>
+var f=debounce( ()=> console.log(`RAN after ${Date.now()-t}`), 2000)
+var t=Date.now()
+f()
+setTimeout(f,1000)
+setTimeout(f,1500)
+//expect only one RAN after ≈3500ms
+</pre>
+≈15 minutes.
+</div>
+</details>
 <details contenteditable="true"><summary contenteditable="false">node practical</summary>
 <div>
 Using
