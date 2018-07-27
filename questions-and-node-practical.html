@@ -53,21 +53,21 @@ pre{
   - encountered nondeterministic tests?
 </div>
 </details>
-<details contenteditable="true"><summary contenteditable="false">What would this match?</summary>
+<details contenteditable="true"><summary contenteditable="false">CSS: What would this match?</summary>
 <div>
 :root[html] div b:not(.b):not([c]>[c]) span+span:target[style*=bold] ~ #hover:hover
 </div>
 </details>
-<details contenteditable="true"><summary contenteditable="false">What would this match?</summary>
+<details contenteditable="true"><summary contenteditable="false">Regex: What would this match?</summary>
 <div>
-/^\d{4}([^0-9a-z])\d{2}\1\d{2}$/i
+/^\d{4}([^0-9a-Z])\d{2}\1\d{2}$/i
 </div>
 </details>
 <details contenteditable="true"><summary contenteditable="false">plain JS</summary>
 <div>
 <pre>"Line by line, what's happening here?"
     .split('')
-    .filter(x=&gt;x&gt;=`x`)
+    .filter(x=&gt;x&gt;=`i`)
     .map(x=&gt;x.charCodeAt(0).toString(2))
     .reduce((o,b)=&gt;(o[b] ? o[b]++ : o[b]=1, o), {})
 </pre>
